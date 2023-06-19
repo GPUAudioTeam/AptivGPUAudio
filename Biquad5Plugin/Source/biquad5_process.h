@@ -1,0 +1,1 @@
+void biquad5_process(float* invec, float* outvec, float* delay, float* coeffsA, float* coeffsB, int maxChannels, int blockSize);

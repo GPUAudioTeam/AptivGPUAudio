@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="f5PI38" name="Biquad5GPU" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              pluginFormats="buildStandalone,buildVST3" pluginVST3Category="Fx,Reverb"
+              companyName="Aptiv">
+  <MAINGROUP id="EoyGM8" name="Biquad5GPU">
+    <GROUP id="{059CEEAA-BFA5-4B42-18EB-C206F3FF5C74}" name="Source">
+      <FILE id="KUswp8" name="biquad5_process.cpp" compile="1" resource="0"
+            file="Source/biquad5_process.cpp"/>
+      <FILE id="CfxtS7" name="biquad5_process.h" compile="0" resource="0"
+            file="Source/biquad5_process.h"/>
+      <FILE id="ZCIhf6" name="bq_design.cpp" compile="1" resource="0" file="Source/bq_design.cpp"/>
+      <FILE id="oo7rnX" name="bq_design.h" compile="0" resource="0" file="Source/bq_design.h"/>
+      <FILE id="P1iSNh" name="biquad5_kernel.cl" compile="0" resource="1"
+            file="Source/biquad5_kernel.cl"/>
+      <FILE id="KjJhz4" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="rW1Jj3" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="DLjtji" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="NoqDMi" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="m4Z46v" name="aptiv_background.jpg" compile="0" resource="1"
+            file="aptiv_background.jpg"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"
+               JUCE_ASIO="0"/>
+  <EXPORTFORMATS>
+    <VS2017 targetFolder="Builds/VisualStudio2017" externalLibraries="TrueAudioNext.lib&#10;OpenCL.lib&#10;amf.lib">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="Biquad5GPU" headerPath="..\..\..\tan\tanlibrary\include;&#10;..\..\..\amf;&#10;..\..\..\OpenCL-Headers;"
+                       libraryPath="..\..\..\tan\build\cmake\bin;&#10;..\..\..\amf\lib;&#10;C:\Program Files (x86)\IntelSWTools\system_studio_2020\OpenCL\sdk\lib\x64;"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="Biquad5GPU" headerPath="..\..\..\tan\tanlibrary\include;&#10;..\..\..\amf;&#10;..\..\..\OpenCL-Headers;"
+                       libraryPath="..\..\..\tan\build\cmake\bin;&#10;..\..\..\amf\lib;&#10;C:\Program Files (x86)\IntelSWTools\system_studio_2020\OpenCL\sdk\lib\x64;"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2017>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>
